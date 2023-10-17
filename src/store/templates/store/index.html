@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="viandes category active" data-meat>
+            <div class="decoTrait">
+                <h2>Viandes</h2>
+            </div>
+
+                <div class="vignette">
+                    {% for productMeat in productsMeat %}
+                                <div class="itemT">
+                                   <img src="{{ productMeat.thumbnail.url }}" alt="{{ productMeat.title }}">
+                                    <h4>{{ productMeat.title }}</h4>
+                                    <div class="description">
+                                        <p>Description:</p>
+                                        <p>{{ productMeat.description}}</p>
+                                    </div>
+                                    <div class="categoryPrice">
+                                        {% if productMeat.promo %}
+                                            <p class="priceP">{{ productMeat.price }} €</p>
+                                            <p class="percent">-{{ productMeat.percent }}%</p>
+                                            <p class="pricePromo">{{ productMeat.price_with_promotion }} €</p>
+                                            <p class="endP">Début promotion : {{ productMeat.promo_start_date }}</p>
+                                            <p class="endP">Fin de promotion : {{ productMeat.promo_date_end }}</p>
+                                        {% else %}
+                                            <p class="price">{{ productMeat.price }} €</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+    </div> <!-- Viandes category -->
+
+    <div class="legumes category active" data-vegetable>
+        <div class="decoTrait">
+                <h2>Légumes</h2>
+        </div>
+
+                <div class="vignette">
+                    {% for productVegetable in productsVegetable %}
+                                <div class="itemT">
+                                   <img src="{{ productVegetable.thumbnail.url }}" alt="{{ productVegetable.title }}">
+                                     <h4>{{ productVegetable.title }}</h4>
+                                    <div class="description">
+                                        <p>Description:</p>
+                                        <p>{{ productVegetable.description}}</p>
+                                    </div>
+                                    <div class="categoryPrice">
+                                        {% if productVegetable.promo %}
+                                            <p class="priceP">{{ productVegetable.price }} €</p>
+                                            <p class="percent">-{{ productVegetable.percent }}%</p>
+                                            <p class="pricePromo">{{ productVegetable.price_with_promotion }} €</p>
+                                            <p class="endP">Début promotion : {{ productVegetable.promo_start_date }}</p>
+                                            <p class="endP">Fin de promotion : {{ productVegetable.promo_date_end }}</p>
+                                        {% else %}
+                                            <p class="price">{{ productVegetable.price }} €</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+    </div><!-- Legumes category -->
+
+    <div class="poissons category active" data-fish>
+        <div class="decoTrait">
+              <h2>Poissons</h2>
+        </div>
+
+                <div class="vignette">
+                    {% for productFish in productsFish %}
+                                <div class="itemT">
+                                   <img src="{{ productFish.thumbnail.url }}" alt="{{ productFish.title }}">
+                                    <h4>{{ productFish.title }}</h4>
+                                    <div class="description">
+                                        <p>Description:</p>
+                                        <p>{{ productFish.description}}</p>
+                                    </div>
+                                    <div class="categoryPrice">
+                                        {% if productFish.promo %}
+                                            <p class="priceP">{{ productFish.price }} €</p>
+                                            <p class="percent">-{{ productFish.percent }}%</p>
+                                            <p class="pricePromo">{{ productFish.price_with_promotion }} €</p>
+                                            <p class="endP">Début promotion : {{ productFish.promo_start_date }}</p>
+                                            <p class="endP">Fin de promotion : {{ productFish.promo_date_end }}</p>
+                                        {% else %}
+                                            <p class="price">{{ productFish.price }} €</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+    </div><!-- poissons category -->
+
+    <div class="fruits category active" data-fruit>
+        <div class="decoTrait">
+              <h2>Fruits</h2>
+        </div>
+                <div class="vignette">
+                    {% for productFruit in productsFruit %}
+                                <div class="itemT">
+                                   <img src="{{ productFruit.thumbnail.url }}" alt="{{ productFruit.title }}">
+                                    <h4>{{ productFruit.title }}</h4>
+                                    <div class="description">
+                                        <p>Description:</p>
+                                        <p>{{ productFruit.description}}</p>
+                                    </div>
+                                    <div class="categoryPrice">
+                                        {% if productFruit.promo %}
+                                            <p class="priceP">{{ productFruit.price }} €</p>
+                                            <p class="percent">-{{ productFruit.percent }}%</p>
+                                            <p class="pricePromo">{{ productFruit.price_with_promotion }} €</p>
+                                            <p class="endP">Début promotion : {{ productFruit.promo_start_date }}</p>
+                                            <p class="endP">Fin de promotion : {{ productFruit.promo_date_end }}</p>
+                                        {% else %}
+                                            <p class="price">{{ productFruit.price }} €</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+    </div><!-- Fruits category -->
+
+    <div class="cosmetiqueH category active" data-cosh>
+        <div class="decoTrait">
+              <h2>Cosmetique Femme</h2>
+        </div>
+
+                <div class="vignette">
+                    {% for productCosmeticH in productsCosmeticH %}
+                                <div class="itemT">
+                                   <img src="{{ productCosmeticH.thumbnail.url }}" alt="{{ productCosmeticH.title }}">
+                                    <h4>{{ productCosmeticH.title }}</h4>
+                                    <div class="description">
+                                        <p>Description:</p>
+                                        <p>{{ productCosmeticH.description}}</p>
+                                    </div>
+                                    <div class="categoryPrice">
+                                        {% if productCosmeticH.promo %}
+                                            <p class="priceP">{{ productCosmeticH.price }} €</p>
+                                            <p class="percent">-{{ productCosmeticH.percent }}%</p>
+                                            <p class="pricePromo">{{ productCosmeticH.price_with_promotion }} €</p>
+                                            <p class="endP">Début promotion : {{ productCosmeticH.promo_start_date }}</p>
+                                            <p class="endP">Fin de promotion : {{ productCosmeticH.promo_date_end }}</p>
+                                        {% else %}
+                                            <p class="price">{{ productCosmeticH.price }} €</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+    </div> <!-- cosmetiqueH category -->
+
+
+    <div class="cosmetiqueF category active" data-cosf>
+       <div class="decoTrait">
+              <h2>Cosmetique Femme</h2>
+        </div>
+
+                <div class="vignette">
+                    {% for productCosmeticF in productsCosmeticF %}
+                                <div class="itemT">
+                                   <img src="{{ productCosmeticF.thumbnail.url }}" alt="{{ productCosmeticF.title }}">
+                                    <h4>{{ productCosmeticF.title }}</h4>
+                                    <div class="description">
+                                        <p>Description:</p>
+                                        <p>{{ productCosmeticF.description}}</p>
+                                    </div>
+                                    <div class="categoryPrice">
+                                        {% if productCosmeticF.promo %}
+                                            <p class="priceP">{{ productCosmeticF.price }} €</p>
+                                            <p class="percent">-{{ productCosmeticF.percent }}%</p>
+                                            <p class="pricePromo">{{ productCosmeticF.price_with_promotion }} €</p>
+                                            <p class="endP">Début promotion : {{ productCosmeticF.promo_start_date }}</p>
+                                            <p class="endP">Fin de promotion : {{ productCosmeticF.promo_date_end }}</p>
+                                        {% else %}
+                                            <p class="price">{{ productCosmeticF.price }} €</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                    {% endfor %}
+                </div>
+    </div> <!-- cosmetiqueF category -->
+{% endblock %}

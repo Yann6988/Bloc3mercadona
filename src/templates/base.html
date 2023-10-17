@@ -1,0 +1,52 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mercadona</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <span class="material-symbols-outlined" onclick="toggler()" id="toggler">menu</span>
+                <a href=""><h1 class="logo">Mercadona</h1></a>
+            </div>
+                    <nav id="filters">
+                        <div id="all" onclick="toggler()"><p>Tout</p></div>
+                        <div id="meat" onclick="toggler()">Viandes</div>
+                        <div id="fish" onclick="toggler()">Poissons</div>
+                        <div id="vegetable" onclick="toggler()">Legumes</div>
+                        <div id="fruit" onclick="toggler()">Fruits</div>
+                        <div id="cosh" onclick="toggler()">Cosmetique Homme</div>
+                        <div id="cosf" onclick="toggler()">Comestique Femme</div>
+                    </nav>
+
+                    <nav id="filtersmobile">
+                        <div id="all" onclick="toggler()"><p>Tout</p></div>
+                        <div id="meat" onclick="toggler()">Viandes</div>
+                        <div id="fish" onclick="toggler()">Poissons</div>
+                        <div id="vegetable" onclick="toggler()">Legumes</div>
+                        <div id="fruit" onclick="toggler()">Fruits</div>
+                        <div id="cosh" onclick="toggler()">Cosmetique Homme</div>
+                        <div id="cosf" onclick="toggler()">Comestique Femme</div>
+                    </nav>
+
+            </header>
+
+        {% block content %}
+        {% endblock %}
+
+        <footer>
+            <h1>Mercadona</h1>
+        </footer>
+
+    </div><!-- .container -->
+
+    <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

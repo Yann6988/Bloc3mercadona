@@ -1,0 +1,197 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Dela+Gothic+One&family=Lato&family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+a {
+    text-decoration: none;
+}
+.container {
+    width: 80vw;
+    margin: 0 auto;
+}
+.header {
+    height: 15svh;
+}
+.logo {
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    font-size: 1.5em;
+    color: green;
+    margin-bottom:20px;
+
+}
+#filters{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+}
+
+#filters div {
+    cursor: pointer;
+    line-height: 1.5;
+    text-align: center;
+    border: 1px solid #D4EFC2;
+    padding: 6px 12px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: green;
+    width: 10vw;
+    height: 100%;
+}
+#filtersmobile div {
+    cursor: pointer;
+    line-height: 1.5;
+    text-align: center;
+    border: 1px solid #D4EFC2;
+    padding: 6px 12px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: green;
+    width: 10vw;
+    height: 100%;
+}
+.material-symbols-outlined {
+    display: none;
+}
+#filtersmobile {
+    display: none;
+}
+@media(max-width: 1100px){
+    #filters {
+        display: none;
+    }
+    .container {
+        width: 100vw;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .header {
+        position: fixed;
+        text-align: center;
+        background-color: white;
+        width: 100%;
+        height: 100px;
+        top: 0;
+        left: 0;
+        box-shadow: 0px 3px 5px #494949;
+    }
+    .material-symbols-outlined {
+        display: flex;
+        float: left;
+        margin: 10px;
+        font-size:80px;
+    }
+    #filtersmobile {
+        display:flex;
+        transform: translateX(-100%);
+        transition: .3s ease;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        height: 100%;
+        justify-content: center;
+        gap: 20px;
+        top:100px;
+        font-size:2em;
+        font-family: 'Roboto', sans-serif;
+        align-items: center;
+    }
+    #filtersmobile div {
+        width: 30vh;
+        height: 5svh;
+        border: 3px solid #D4EFC2;
+    }
+    .category {
+        margin-top:105px;
+    }
+    .logo {
+        font-size:2em;
+    }
+}
+#filters div:hover {
+    color: green;
+    background-color: #D4EFC2;
+    border-color: #D4EFC2;
+}
+#filters div p{
+    font-size: 1em;
+    text-align: center;
+}
+.inactive {
+    display: none;
+}
+.category {
+    z-index: 1;
+}
+.decoTrait {
+    border-bottom: 1px solid #4f4f4f;
+    font-family: 'Roboto', sans-serif;
+    color: #4f4f4f;
+    margin-top: 10px;
+}
+.vignette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 15px;
+}
+.itemT {
+    background-color: white;
+    border-radius: 10px;
+    width: 250px;
+    border: 2px solid #D4EFC2;
+    padding: 15px;
+    color: #494949;
+}
+.itemT h4{
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid #D4EFC2;
+}
+.itemT p{
+    font-family: 'Roboto', sans-serif;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.description p:first-child {
+    text-decoration: underline;
+}
+.description {
+    border-bottom: 1px solid #D4EFC2;
+    min-height: 8svh;
+    font-size: 0.9em;
+}
+.categoryPrice {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 5px;
+}
+.priceP {
+    width: 50%;
+    text-decoration:line-through;
+}
+.percent {
+    font-size: 1.4em;
+}
+.endP {
+    font-size: 0.8em;
+    margin: 0 auto;
+}
+.pricePromo {
+    width: 50%;
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: red;
+}
+footer {
+    height: 20svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer h1 {
+     font-family: 'Concert One', cursive;
+     color: green;
+}
